@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Onekaizen | Corporate concept</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+            background: #f3f1ec;
+            color: #18252d;
+            font-family: Archivo, Arial, sans-serif
+        }
+
+        .wrap {
+            width: min(1180px, calc(100% - 38px));
+            margin: auto
+        }
+
+        .top {
+            background: #162a36;
+            color: #fff
+        }
+
+        .nav {
+            height: 76px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px
+        }
+
+        .logo {
+            font-size: 1.22rem;
+            font-weight: 800;
+            letter-spacing: -.07em
+        }
+
+        .logo i {
+            display: inline-grid;
+            place-items: center;
+            width: 28px;
+            height: 28px;
+            margin-right: 7px;
+            background: #ec5b35;
+            color: #fff;
+            font-style: normal;
+            transform: skew(-10deg)
+        }
+
+        .nav a {
+            font-size: .83rem;
+            margin-left: 20px;
+            color: #cbd9dc
+        }
+
+        .lang {
+            padding: 8px;
+            border: 1px solid #50636d;
+            background: transparent;
+            color: #fff;
+            border-radius: 4px
+        }
+
+        .hero {
+            padding: 82px 0 75px;
+            background: linear-gradient(115deg, #162a36 63%, #ec5b35 63%)
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.1fr .9fr;
+            gap: 48px;
+            align-items: center
+        }
+
+        .kicker {
+            font-size: .7rem;
+            color: #f9bcab;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .15em
+        }
+
+        h1,
+        h2,
+        h3 {
+            letter-spacing: -.06em
+        }
+
+        h1 {
+            font-size: clamp(3rem, 6vw, 5.8rem);
+            line-height: .91;
+            margin: 15px 0 24px;
+            max-width: 700px
+        }
+
+        p {
+            line-height: 1.65
+        }
+
+        .hero p {
+            max-width: 525px;
+            color: #c9d7d8
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 18px;
+            background: #ec5b35;
+            color: #fff;
+            border-radius: 4px;
+            font-size: .85rem;
+            font-weight: 700;
+            margin-top: 14px
+        }
+
+        .photo {
+            min-height: 350px;
+            background: linear-gradient(#541c1470,#541c1444), url('https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?auto=format&fit=crop&w=1200&q=80') center/cover;
+            display: grid;
+            place-items: center;
+            border: 1px solid rgba(255, 255, 255, .5);
+            color: #fff;
+            font-size: .75rem;
+            letter-spacing: .13em;
+            text-transform: uppercase
+        }
+
+        .section {
+            padding: 80px 0
+        }
+
+        .about {
+            display: grid;
+            grid-template-columns: .75fr 1.25fr;
+            gap: 64px
+        }
+
+        .about h2,
+        .section-head h2 {
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            line-height: 1;
+            margin: 10px 0
+        }
+
+        .muted {
+            color: #64747a
+        }
+
+        .products {
+            background: #fff
+        }
+
+        .section-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            gap: 30px;
+            margin-bottom: 30px
+        }
+
+        .section-head p {
+            max-width: 430px;
+            color: #64747a
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1px;
+            background: #dce2e2
+        }
+
+        .item {
+            min-height: 170px;
+            padding: 22px;
+            background: #fff
+        }
+
+        .n {
+            color: #ec5b35;
+            font-size: .75rem;
+            font-weight: 700
+        }
+
+        .item h3 {
+            font-size: 1.15rem;
+            margin: 34px 0 0
+        }
+
+        .split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            background: #162a36;
+            color: #fff
+        }
+
+        .split>div {
+            padding: 55px
+        }
+
+        .split .muted {
+            color: #b8c9cc
+        }
+
+        .person {
+            border-top: 1px solid #526670;
+            padding: 17px 0
+        }
+
+        .person strong {
+            display: block
+        }
+
+        .person span {
+            color: #f9bcab;
+            font-size: .8rem
+        }
+
+        .quote {
+            background: #ec5b35
+        }
+
+        .quote input,
+        .quote select,
+        .quote textarea {
+            width: 100%;
+            padding: 11px;
+            border: 0;
+            margin-top: 5px;
+            font: inherit
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 13px
+        }
+
+        .quote label {
+            font-size: .75rem;
+            font-weight: 700
+        }
+
+        .quote button {
+            margin-top: 15px;
+            padding: 12px 16px;
+            border: 1px solid #fff;
+            color: #fff;
+            background: transparent;
+            font-weight: 700;
+            cursor: pointer
+        }
+
+        footer {
+            padding: 28px 0;
+            background: #101f27;
+            color: #aabfc4;
+            font-size: .82rem
+        }
+
+        @media(max-width:760px) {
+            .nav nav {
+                display: none
+            }
+
+            .hero {
+                padding: 58px 0;
+                background: #162a36
+            }
+
+            .hero-grid,
+            .about,
+            .split {
+                grid-template-columns: 1fr
+            }
+
+            .grid {
+                grid-template-columns: 1fr 1fr
+            }
+
+            .section-head {
+                display: block
+            }
+
+            .photo {
+                min-height: 240px
+            }
+
+            .split>div {
+                padding: 36px 25px
+            }
+
+            .section {
+                padding: 60px 0
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="top">
+        <div class="wrap nav">
+            <div class="logo"><i>K</i>onekaizen</div>
+            <nav><a href="#products" data-t="navProducts">Products</a><a href="#people"
+                    data-t="navPeople">Leadership</a><a href="#quote" data-t="navQuote">Get a quote</a></nav><select
+                class="lang" id="lang">
+                <option value="en">EN</option>
+                <option value="de">DE</option>
+                <option value="it">IT</option>
+                <option value="es">ES</option>
+                <option value="zh">中文</option>
+            </select>
+        </div>
+        <div class="hero">
+            <div class="wrap hero-grid">
+                <div>
+                    <div class="kicker" data-t="kicker">Onekaizen Global Pvt. Ltd.</div>
+                    <h1 data-t="hero">Steel supply, engineered around your business.</h1>
+                    <p data-t="intro">A steel processing and supply-chain partner for bright bars, cold-drawn bars,
+                        precision-ground bars, sheets and more.</p><a class="btn" href="#quote" data-t="cta">Request a
+                        quotation</a>
+                </div>
+                <div class="photo" data-t="photo">Factory image placeholder</div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="section">
+            <div class="wrap about">
+                <div>
+                    <div class="kicker" style="color:#ec5b35" data-t="aboutKicker">What sets us apart</div>
+                    <h2 data-t="aboutTitle">Expertise that travels with every order.</h2>
+                </div>
+                <p class="muted" data-t="aboutText">Onekaizen aggregates steel grades from MS to high-alloy Ni-Mo-Ti in
+                    round bars, wire rods, HR and CR steel, aluminium and titanium. Our team combines metallurgical
+                    knowledge with processing and just-in-time delivery support.</p>
+            </div>
+        </section>
+        <section class="section products" id="products">
+            <div class="wrap">
+                <div class="section-head">
+                    <div>
+                        <div class="kicker" style="color:#ec5b35" data-t="productKicker">Products & services</div>
+                        <h2 data-t="productTitle">One partner. Eight capabilities.</h2>
+                    </div>
+                    <p data-t="productCopy">A direct, easy-to-scan structure for buyers and technical teams.</p>
+                </div>
+                <div class="grid">
+                    <div class="item">
+                        <div class="n">01</div>
+                        <h3>Steel Processing Unit</h3>
+                    </div>
+                    <div class="item">
+                        <div class="n">02</div>
+                        <h3>Import</h3>
+                    </div>
+                    <div class="item">
+                        <div class="n">03</div>
+                        <h3>Export</h3>
+                    </div>
+                    <div class="item">
+                        <div class="n">04</div>
+                        <h3>Innovative Materials & Process Solutions</h3>
+                    </div>
+                    <div class="item">
+                        <div class="n">05</div>
+                        <h3>Metallurgical Consultancy</h3>
+                    </div>
+                    <div class="item">
+                        <div class="n">06</div>
+                        <h3>Tool & Die Steel</h3>
+                    </div>
+                    <div class="item">
+                        <div class="n">07</div>
+                        <h3>AMS / Die Scrap</h3>
+                    </div>
+                    <div class="item">
+                        <div class="n">08</div>
+                        <h3>Waste Management</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="split" id="people">
+            <div>
+                <div class="kicker" data-t="peopleKicker">Leadership</div>
+                <h2 data-t="peopleTitle">Grounded in steel. Built for growth.</h2>
+                <div class="person"><strong>Mr. Santosh Dhage</strong><span>Managing Director</span>
+                    <p class="muted">M.Tech in Metallurgical Engineering; leads expansion, import-export and business
+                        development.</p>
+                </div>
+                <div class="person"><strong>Mr. Kunal Sood</strong><span>Director</span>
+                    <p class="muted">Chennai-based steel industry director with 25 years of experience.</p>
+                </div>
+            </div>
+            <div class="quote" id="quote">
+                <div class="kicker" style="color:#ffe0d8" data-t="quoteKicker">Tell us your requirement</div>
+                <h2 data-t="quoteTitle">Request a quotation.</h2>
+                <form>
+                    <div class="form-grid"><label>Category<select>
+                                <option>Choose category</option>
+                                <option>Steel Processing Unit</option>
+                                <option>Tool & Die Steel</option>
+                            </select></label><label>Grade<input placeholder="Required grade"></label><label>Size
+                            (mm)<input placeholder="Required size"></label><label>Quantity (MT)<input
+                                placeholder="Required quantity"></label></div><label>Company name<input
+                            placeholder="Your company"></label><label>Remarks<textarea rows="3"
+                            placeholder="Tell us about your requirement"></textarea></label><button type="button"
+                        data-t="send">Send enquiry</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="wrap">Office No. 218, Amanora Apex, Amanora Park Town, Hadapsar, Pune, MH – 411028 &nbsp; | &nbsp;
+            +91 9822969743 &nbsp; | &nbsp; sales@onekaizen.com</div>
+    </footer>
+    <script>const d = { en: { navProducts: 'Products', navPeople: 'Leadership', navQuote: 'Get a quote', kicker: 'Onekaizen Global Pvt. Ltd.', hero: 'Steel supply, engineered around your business.', intro: 'A steel processing and supply-chain partner for bright bars, cold-drawn bars, precision-ground bars, sheets and more.', cta: 'Request a quotation', photo: 'Factory image placeholder', aboutKicker: 'What sets us apart', aboutTitle: 'Expertise that travels with every order.', aboutText: 'Onekaizen aggregates steel grades from MS to high-alloy Ni-Mo-Ti in round bars, wire rods, HR and CR steel, aluminium and titanium. Our team combines metallurgical knowledge with processing and just-in-time delivery support.', productKicker: 'Products & services', productTitle: 'One partner. Eight capabilities.', productCopy: 'A direct, easy-to-scan structure for buyers and technical teams.', peopleKicker: 'Leadership', peopleTitle: 'Grounded in steel. Built for growth.', quoteKicker: 'Tell us your requirement', quoteTitle: 'Request a quotation.', send: 'Send enquiry' }, de: { navProducts: 'Produkte', navPeople: 'Führung', navQuote: 'Angebot', kicker: 'Onekaizen Global Pvt. Ltd.', hero: 'Stahlversorgung, abgestimmt auf Ihr Unternehmen.', intro: 'Ihr Partner für Stahlverarbeitung und Lieferketten.', cta: 'Angebot anfordern', photo: 'Bildplatzhalter Fabrik', aboutKicker: 'Unser Vorteil', aboutTitle: 'Know-how für jede Bestellung.', productKicker: 'Produkte & Leistungen', productTitle: 'Ein Partner. Acht Kompetenzen.', productCopy: 'Klar strukturiert für Einkauf und Technik.', peopleKicker: 'Führung', peopleTitle: 'In Stahl verwurzelt. Für Wachstum gebaut.', quoteKicker: 'Ihre Anforderung', quoteTitle: 'Angebot anfordern.', send: 'Anfrage senden' }, it: { navProducts: 'Prodotti', navPeople: 'Leadership', navQuote: 'Preventivo', kicker: 'Onekaizen Global Pvt. Ltd.', hero: 'Fornitura di acciaio progettata per la tua azienda.', intro: 'Partner per lavorazione dell’acciaio e supply chain.', cta: 'Richiedi un preventivo', photo: 'Segnaposto immagine fabbrica', aboutKicker: 'Il nostro valore', aboutTitle: 'Competenza in ogni ordine.', productKicker: 'Prodotti e servizi', productTitle: 'Un partner. Otto capacità.', productCopy: 'Una struttura chiara per acquisti e team tecnici.', peopleKicker: 'Leadership', peopleTitle: 'Radicati nell’acciaio. Pronti a crescere.', quoteKicker: 'La tua esigenza', quoteTitle: 'Richiedi un preventivo.', send: 'Invia richiesta' }, es: { navProducts: 'Productos', navPeople: 'Liderazgo', navQuote: 'Cotización', kicker: 'Onekaizen Global Pvt. Ltd.', hero: 'Suministro de acero diseñado para su negocio.', intro: 'Socio de procesamiento de acero y cadena de suministro.', cta: 'Solicitar cotización', photo: 'Marcador de imagen de fábrica', aboutKicker: 'Nuestra diferencia', aboutTitle: 'Experiencia en cada pedido.', productKicker: 'Productos y servicios', productTitle: 'Un socio. Ocho capacidades.', productCopy: 'Estructura clara para compras y equipos técnicos.', peopleKicker: 'Liderazgo', peopleTitle: 'Basados en acero. Creados para crecer.', quoteKicker: 'Su requisito', quoteTitle: 'Solicitar cotización.', send: 'Enviar consulta' }, zh: { navProducts: '产品', navPeople: '管理团队', navQuote: '获取报价', kicker: 'Onekaizen Global Pvt. Ltd.', hero: '为您的业务量身打造钢材供应。', intro: '钢材加工与供应链合作伙伴。', cta: '申请报价', photo: '工厂图片占位符', aboutKicker: '我们的优势', aboutTitle: '每一笔订单都承载专业实力。', productKicker: '产品与服务', productTitle: '一个伙伴，八项能力。', productCopy: '为采购和技术团队提供清晰结构。', peopleKicker: '管理团队', peopleTitle: '扎根钢铁，持续成长。', quoteKicker: '告诉我们您的需求', quoteTitle: '申请报价。', send: '发送询价' } }; document.querySelector('#lang').onchange = e => { document.documentElement.lang = e.target.value; document.querySelectorAll('[data-t]').forEach(x => x.textContent = d[e.target.value][x.dataset.t] || x.textContent) }</script>
+</body>
+
+</html>
